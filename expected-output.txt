@@ -1,0 +1,81 @@
+This produces nothing, spreadsheet gem cannot handle corrupt file
+'ruby excel.rb test.xls'
+Finished running 'ruby excel.rb test.xls'
+
+This works (after opening test.xls in OpenOffice and saving as Excel 95)
+'ruby excel.rb test-fixed.xls'
+Row: 0 Cell: 0> Tran Id
+Row: 0 Cell: 1> Original Id
+Row: 0 Cell: 2> Tran Date
+Row: 0 Cell: 3> Tran Status
+Row: 0 Cell: 4> Filer
+Row: 0 Cell: 5> Contributor/Payee
+Row: 0 Cell: 6> Sub Type
+Row: 0 Cell: 7> Amount
+Row: 0 Cell: 8> Aggregate Amount
+Row: 0 Cell: 9> Contributor/Payee Committee ID
+Row: 0 Cell: 10> Filer Id
+Row: 0 Cell: 11> Attest By Name
+Row: 0 Cell: 12> Attest Date
+Row: 0 Cell: 13> Review By Name
+Row: 0 Cell: 14> Review Date
+Row: 0 Cell: 15> Due Date
+Row: 0 Cell: 16> Occptn Ltr Date
+Row: 0 Cell: 17> Pymt Sched Txt
+Row: 0 Cell: 18> Purp Desc
+Row: 0 Cell: 19> Intrst Rate
+Row: 0 Cell: 20> Check Nbr
+Row: 0 Cell: 21> Tran Stsfd Ind
+Row: 0 Cell: 22> Filed By Name
+Row: 0 Cell: 23> Filed Date
+Row: 0 Cell: 24> Addr book Agent Name
+Row: 0 Cell: 25> Book Type
+Row: 0 Cell: 26> Title Txt
+Row: 0 Cell: 27> Occptn Txt
+Row: 0 Cell: 28> Emp Name
+Row: 0 Cell: 29> Emp City
+Row: 0 Cell: 30> Emp State
+Row: 0 Cell: 31> Employ Ind
+Row: 0 Cell: 32> Self Employ Ind
+Row: 0 Cell: 33> Addr Line1
+Row: 0 Cell: 34> Addr Line2
+Row: 0 Cell: 35> City
+Row: 0 Cell: 36> State
+Row: 0 Cell: 37> Zip
+Row: 0 Cell: 38> Zip Plus Four
+Row: 0 Cell: 39> County
+Row: 0 Cell: 40> Purpose Codes
+Row: 0 Cell: 41> Exp Date
+Row: 0 Cell: 0> 1299834
+Row: 0 Cell: 1> 1299834
+Row: 0 Cell: 2> 08/13/2012
+Row: 0 Cell: 3> Original
+Row: 0 Cell: 4> Friends of Joe Pishioneri
+Row: 0 Cell: 5> Miscellaneous Cash Expenditures $100 and under
+Row: 0 Cell: 6> Cash Expenditure
+Row: 0 Cell: 7> 50
+Row: 0 Cell: 8> 0
+Row: 0 Cell: 10> 15658
+Row: 0 Cell: 11> Lori L Piercy
+Row: 0 Cell: 12> 08/14/2012
+Row: 0 Cell: 15> 09/12/2012
+Row: 0 Cell: 21> N
+Row: 0 Cell: 22> Lori L Piercy
+Row: 0 Cell: 23> 08/14/2012
+Row: 0 Cell: 31> N
+Row: 0 Cell: 32> N
+
+Finished running 'ruby excel.rb test-fixed.xls'
+
+The output produced just now should have started with:
+Row: 0 Cell: 0> Tran Id
+Row: 0 Cell: 1> Original Id
+Row: 0 Cell: 2> Tran Date
+Row: 0 Cell: 3> Tran Status
+Row: 0 Cell: 4> Filer
+Row: 0 Cell: 5> Contributor/Payee
+Row: 0 Cell: 6> Sub Type
+
+Now look at the differences from the file command:
+test.xls: CDF V2 Document, corrupt: Cannot read summary info
+test-fixed.xls: CDF V2 Document, Little Endian, Os: Windows, Version 1.0, Code page: -535, Revision Number: 0
